@@ -9,14 +9,7 @@
 </template>
 
 <script setup lang="ts">
-// 定义 props
-interface Props {
-  theme?: 'dark' | 'light'
-}
-
-// const props = withDefaults(defineProps<Props>(), { // 未使用，注释掉
-//   theme: 'dark'
-// })
+// 组件不需要props，直接使用
 </script>
 
 <style scoped>
