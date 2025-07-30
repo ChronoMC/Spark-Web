@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ main, master ]
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -57,4 +62,6 @@ jobs:
         git commit -m "Deploy frontend build - $(date)"
         
         # 推送到dist分支
-        git push origin dist --force 
+        git push origin dist --force
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 

@@ -1,0 +1,58 @@
+name: Deploy to dist branch
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: |
+          cd frontend
+          rm -rf node_modules package-lock.json
+          npm install
+
+      - name: Build
+        run: |
+          cd frontend
+          npm run build
+
+      - name: Deploy to dist branch
+        run: |
+          # 配置Git
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # 创建或切换到dist分支
+          git checkout -b dist || git checkout dist
+          
+          # 清空dist分支内容
+          git rm -rf . || true
+          
+          # 复制构建文件
+          cp -r frontend/dist/* .
+          
+          # 添加并提交
+          git add .
+          git commit -m "Deploy build from ${{ github.sha }}"
+          
+          # 推送到dist分支
+          git push origin dist --force 

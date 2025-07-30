@@ -1,6 +1,6 @@
 # GitHub Actions 工作流说明
 
-本项目包含两个GitHub Actions工作流文件，用于自动构建和部署前端应用。
+本项目包含多个GitHub Actions工作流文件，用于自动构建和部署前端应用。
 
 ## 工作流文件
 
@@ -9,10 +9,20 @@
 - **功能**：构建前端并将dist文件推送到dist分支
 - **特点**：使用原生Git命令进行部署
 
-### 2. `deploy-safe.yml` - 安全部署工作流（推荐）
+### 2. `deploy-safe.yml` - 安全部署工作流
 - **触发条件**：推送到 main/master 分支或手动触发
 - **功能**：构建前端并使用专门的deploy action部署到dist分支
 - **特点**：更安全，使用artifacts传递构建文件
+
+### 3. `deploy-simple.yml` - GitHub Pages部署工作流
+- **触发条件**：推送到 main/master 分支或手动触发
+- **功能**：构建前端并部署到GitHub Pages
+- **特点**：使用GitHub Pages官方action，最稳定
+
+### 4. `deploy-dist-branch.yml` - dist分支部署工作流（推荐）
+- **触发条件**：推送到 main/master 分支或手动触发
+- **功能**：构建前端并推送到dist分支
+- **特点**：专门为dist分支设计，权限配置正确
 
 ## 使用方法
 
