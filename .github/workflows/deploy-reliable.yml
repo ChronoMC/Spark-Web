@@ -1,4 +1,4 @@
-name: Deploy to dist branch
+name: Deploy to dist branch (Reliable)
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: "dist-branch"
+  group: "dist-deploy"
   cancel-in-progress: true
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -39,30 +39,35 @@ jobs:
           cd frontend
           npm run build
 
-      - name: Deploy to dist branch
+      - name: Setup Git
         run: |
-          # 配置Git
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Create or update dist branch
+        run: |
+          # 检查dist分支是否存在
+          if git ls-remote --heads origin dist | grep -q dist; then
+            # 分支存在，获取最新版本
+            git fetch origin dist
+            git checkout dist
+            git reset --hard origin/dist
+          else
+            # 分支不存在，创建新分支
+            git checkout --orphan dist
+          fi
           
-          # 获取最新的dist分支
-          git fetch origin dist:dist || true
-          
-          # 切换到dist分支，如果不存在则创建
-          git checkout dist || git checkout -b dist
-          
-          # 重置到最新状态
-          git reset --hard HEAD
-          
-          # 清空dist分支内容（保留.git）
-          find . -mindepth 1 -not -path './.git*' -delete
+          # 清空工作目录（保留.git）
+          git rm -rf . || true
           
           # 复制构建文件
           cp -r frontend/dist/* .
           
-          # 添加并提交
+          # 添加所有文件
           git add .
-          git commit -m "Deploy build from ${{ github.sha }} - $(date)"
           
-          # 推送到dist分支
+          # 提交更改
+          git commit -m "Deploy build from ${{ github.sha }} - $(date '+%Y-%m-%d %H:%M:%S')"
+          
+          # 推送到远程分支
           git push origin dist --force 

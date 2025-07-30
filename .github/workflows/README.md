@@ -19,10 +19,15 @@
 - **功能**：构建前端并部署到GitHub Pages
 - **特点**：使用GitHub Pages官方action，最稳定
 
-### 4. `deploy-dist-branch.yml` - dist分支部署工作流（推荐）
+### 4. `deploy-dist-branch.yml` - dist分支部署工作流
 - **触发条件**：推送到 main/master 分支或手动触发
 - **功能**：构建前端并推送到dist分支
 - **特点**：专门为dist分支设计，权限配置正确
+
+### 5. `deploy-reliable.yml` - 可靠部署工作流（推荐）
+- **触发条件**：推送到 main/master 分支或手动触发
+- **功能**：构建前端并推送到dist分支
+- **特点**：更可靠的Git操作，处理分支冲突
 
 ## 使用方法
 
@@ -61,6 +66,14 @@
 1. **构建失败**：检查前端依赖是否正确安装
 2. **部署失败**：检查GitHub Actions权限设置
 3. **文件路径错误**：确保前端构建输出目录为 `frontend/dist/`
+4. **分支冲突**：使用 `deploy-reliable.yml` 工作流处理Git引用锁问题
+
+### Git引用锁问题解决
+如果遇到 `cannot lock ref` 错误：
+1. 使用 `deploy-reliable.yml` 工作流
+2. 确保只有一个工作流在运行
+3. 检查并发控制配置
+4. 手动删除dist分支后重新部署
 
 ### 调试步骤
 1. 查看Actions页面的详细日志
