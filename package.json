@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@kangc/v-md-editor": "^1.7.12",
+    "@mdit-vue/plugin-component": "^2.1.4",
+    "@mdit-vue/plugin-frontmatter": "^2.1.4",
+    "js-yaml": "^4.1.0",
+    "katex": "^0.16.22",
+    "markdown-it": "^14.1.0",
+    "markdown-it-katex": "^2.0.3",
+    "prismjs": "^1.30.0",
+    "rehype": "^13.0.2",
+    "rehype-katex": "^7.0.1",
+    "rehype-raw": "^7.0.0",
+    "rehype-stringify": "^10.0.1",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "remark-parse": "^11.0.0",
+    "svg-captcha": "^1.4.0",
+    "svg.js": "^2.7.1",
+    "unified": "^11.0.5"
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "svgViewBoxZoom": 60,
+  "svgViewBoxMin": {
+    "x": -92.2599441528318,
+    "y": 48.4999969482426
+  },
+  "graph": {
+    "options": {
+      "type": "directed",
+      "multi": true,
+      "allowSelfLoops": true
+    },
+    "attributes": {
+
+    },
+    "nodes": [
+      {
+        "key": "stn_bQBfMI89xI",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "x": 175.96,
+          "y": 280,
+          "type": "shmetro-osysi",
+          "shmetro-osysi": {
+            "names": [
+              "A站",
+              "A"
+            ],
+            "nameOffsetX": "right",
+            "nameOffsetY": "top"
+          }
+        }
+      },
+      {
+        "key": "stn_JtXNY3pl9X",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "x": 225.64,
+          "y": 280,
+          "type": "shmetro-basic",
+          "shmetro-basic": {
+            "names": [
+              "A站",
+              "a"
+            ],
+            "nameOffsetX": "right",
+            "nameOffsetY": "top"
+          }
+        }
+      },
+      {
+        "key": "stn__2HhnjlM4o",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "x": 283.96,
+          "y": 280,
+          "type": "shmetro-basic",
+          "shmetro-basic": {
+            "names": [
+              "C站",
+              "C"
+            ],
+            "nameOffsetX": "right",
+            "nameOffsetY": "top"
+          }
+        }
+      },
+      {
+        "key": "stn_5pKVo63N1n",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "x": 175.96,
+          "y": 372.56,
+          "type": "shmetro-basic",
+          "shmetro-basic": {
+            "names": [
+              "F站",
+              "F"
+            ],
+            "nameOffsetX": "right",
+            "nameOffsetY": "top"
+          }
+        }
+      },
+      {
+        "key": "stn_RmQmPrOmr6",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "x": 175.96,
+          "y": 326.28,
+          "type": "shmetro-basic",
+          "shmetro-basic": {
+            "names": [
+              "E站",
+              "E"
+            ],
+            "nameOffsetX": "right",
+            "nameOffsetY": "top"
+          }
+        }
+      },
+      {
+        "key": "stn_IBbHEQP3B1",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "x": 175.96,
+          "y": 238.48,
+          "type": "shmetro-basic",
+          "shmetro-basic": {
+            "names": [
+              "D站",
+              "D"
+            ],
+            "nameOffsetX": "right",
+            "nameOffsetY": "top"
+          }
+        }
+      },
+      {
+        "key": "misc_node_j-I4Zt1CEo",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "x": 165.88,
+          "y": 203.16,
+          "type": "suzhourt-num-line-badge",
+          "suzhourt-num-line-badge": {
+            "num": 1,
+            "branch": false,
+            "color": [
+              "other",
+              "other",
+              "#00a1e9",
+              "#fff"
+            ]
+          }
+        }
+      },
+      {
+        "key": "misc_node_lgiH-4e_Nz",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "x": 165.48,
+          "y": 380.84,
+          "type": "suzhourt-num-line-badge",
+          "suzhourt-num-line-badge": {
+            "num": 1,
+            "branch": false,
+            "color": [
+              "other",
+              "other",
+              "#00a1e9",
+              "#fff"
+            ]
+          }
+        }
+      },
+      {
+        "key": "misc_node_TJIDA1d-Ip",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "x": 323.48,
+          "y": 268.6,
+          "type": "suzhourt-num-line-badge",
+          "suzhourt-num-line-badge": {
+            "num": 1,
+            "branch": false,
+            "color": [
+              "shanghai",
+              "sh1",
+              "#e3002b",
+              "#fff"
+            ]
+          }
+        }
+      },
+      {
+        "key": "misc_node_wI5jtt7f3b",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "x": 128.6,
+          "y": 270.52,
+          "type": "suzhourt-num-line-badge",
+          "suzhourt-num-line-badge": {
+            "num": 1,
+            "branch": false,
+            "color": [
+              "shanghai",
+              "sh1",
+              "#e3002b",
+              "#fff"
+            ]
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "key": "line_Q96-yw5fNw",
+        "source": "stn_bQBfMI89xI",
+        "target": "stn_JtXNY3pl9X",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "type": "perpendicular",
+          "perpendicular": {
+            "startFrom": "from",
+            "offsetFrom": 0,
+            "offsetTo": 0,
+            "roundCornerFactor": 18.33
+          },
+          "style": "single-color",
+          "single-color": {
+            "color": [
+              "shanghai",
+              "sh1",
+              "#E3002B",
+              "#fff"
+            ]
+          },
+          "reconcileId": "",
+          "parallelIndex": 0
+        }
+      },
+      {
+        "key": "line_TOVQDyvIba",
+        "source": "stn_JtXNY3pl9X",
+        "target": "stn__2HhnjlM4o",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "type": "diagonal",
+          "diagonal": {
+            "startFrom": "from",
+            "offsetFrom": 0,
+            "offsetTo": 0,
+            "roundCornerFactor": 10
+          },
+          "style": "single-color",
+          "single-color": {
+            "color": [
+              "shanghai",
+              "sh1",
+              "#E3002B",
+              "#fff"
+            ]
+          },
+          "reconcileId": "",
+          "parallelIndex": 0
+        }
+      },
+      {
+        "key": "line_odfEiI9O6Q",
+        "source": "stn_IBbHEQP3B1",
+        "target": "stn_bQBfMI89xI",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "type": "diagonal",
+          "diagonal": {
+            "startFrom": "from",
+            "offsetFrom": 0,
+            "offsetTo": 0,
+            "roundCornerFactor": 10
+          },
+          "style": "single-color",
+          "single-color": {
+            "color": [
+              "other",
+              "other",
+              "#00a1e9",
+              "#fff"
+            ]
+          },
+          "reconcileId": "",
+          "parallelIndex": 0
+        }
+      },
+      {
+        "key": "line_Ssag3wFCBe",
+        "source": "stn_bQBfMI89xI",
+        "target": "stn_RmQmPrOmr6",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "type": "diagonal",
+          "diagonal": {
+            "startFrom": "from",
+            "offsetFrom": 0,
+            "offsetTo": 0,
+            "roundCornerFactor": 10
+          },
+          "style": "single-color",
+          "single-color": {
+            "color": [
+              "other",
+              "other",
+              "#00a1e9",
+              "#fff"
+            ]
+          },
+          "reconcileId": "",
+          "parallelIndex": 0
+        }
+      },
+      {
+        "key": "line_5hIPjkrQqJ",
+        "source": "stn_RmQmPrOmr6",
+        "target": "stn_RmQmPrOmr6",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "type": "diagonal",
+          "diagonal": {
+            "startFrom": "from",
+            "offsetFrom": 0,
+            "offsetTo": 0,
+            "roundCornerFactor": 10
+          },
+          "style": "single-color",
+          "single-color": {
+            "color": [
+              "other",
+              "other",
+              "#00a1e9",
+              "#fff"
+            ]
+          },
+          "reconcileId": "",
+          "parallelIndex": 0
+        }
+      },
+      {
+        "key": "line_S7W1IdfWV4",
+        "source": "stn_RmQmPrOmr6",
+        "target": "stn_5pKVo63N1n",
+        "attributes": {
+          "visible": true,
+          "zIndex": 0,
+          "type": "perpendicular",
+          "perpendicular": {
+            "startFrom": "from",
+            "offsetFrom": 0,
+            "offsetTo": 0,
+            "roundCornerFactor": 18.33
+          },
+          "style": "single-color",
+          "single-color": {
+            "color": [
+              "other",
+              "other",
+              "#00a1e9",
+              "#fff"
+            ]
+          },
+          "reconcileId": "",
+          "parallelIndex": -1
+        }
+      }
+    ]
+  },
+  "version": 56
+}
