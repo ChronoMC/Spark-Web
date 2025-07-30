@@ -21,7 +21,7 @@ interface ToolBtn {
   text: string
   onClick: () => void
 }
-const props = defineProps<{ buttons: ToolBtn[] }>()
+defineProps<{ buttons: ToolBtn[] }>()
 </script>
 
 <style scoped>

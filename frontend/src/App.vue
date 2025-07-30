@@ -8,7 +8,7 @@ import './styles/themes.css'
 import ToolBar from './components/ToolBar.vue'
 
 const serverStatus = ref<any>(null);
-const metroMap = ref<any>({ lines: [] });
+// const metroMap = ref<any>({ lines: [] }); // 未使用，注释掉
 const newsList = ref<any[]>([]);
 const newsLoading = ref(false);
 const currentTheme = ref<'dark' | 'light'>('dark');
@@ -53,7 +53,7 @@ const showDialog = ref(false)
 const dialogTitle = ref('')
 const dialogAuthor = ref('')
 const dialogTags = ref<string[]>([])
-const dialogContent = ref('')
+// const dialogContent = ref('') // 未使用，注释掉
 const dialogRawContent = ref('')
 
 function parseMarkdownWithYaml(text: string) {
@@ -107,9 +107,9 @@ function jumpTo(url: string) {
   window.open(url, '_blank')
 }
 
-function download(url: string) {
-  window.open(url, '_blank')
-}
+// function download(url: string) { // 未使用，注释掉
+//   window.open(url, '_blank')
+// }
 
 async function fetchAll() {
   // 服务器状态

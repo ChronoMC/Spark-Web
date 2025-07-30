@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { defineProps, withDefaults } from 'vue'
-const props = withDefaults(defineProps<{
+withDefaults(defineProps<{
   img?: any
   icon?: string
   text: string

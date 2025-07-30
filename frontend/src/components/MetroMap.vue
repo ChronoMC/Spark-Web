@@ -14,9 +14,9 @@ interface Props {
   theme?: 'dark' | 'light'
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  theme: 'dark'
-})
+// const props = withDefaults(defineProps<Props>(), { // 未使用，注释掉
+//   theme: 'dark'
+// })
 </script>
 
 <style scoped>

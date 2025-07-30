@@ -39,10 +39,10 @@ if (props.options.enableMath) {
 }
 
 // 添加容器插件 (info, warning, success, danger, tip)
-const createContainerRule = (name: string, titleEmoji: string, borderColor: string) => {
+const createContainerRule = (name: string, titleEmoji: string, _borderColor: string) => {
   md.use(markdownItContainer, name, {
     validate: (params: string) => params.trim().match(new RegExp(`^${name}\\s+(.*)$`)),
-    render: (tokens, idx) => {
+    render: (tokens: any[], idx: number) => {
       const m = tokens[idx].info.trim().match(new RegExp(`^${name}\\s+(.*)$`))
       if (tokens[idx].nesting === 1) {
         // 使用 md.utils.escapeHtml 转义容器标题，防止 XSS
