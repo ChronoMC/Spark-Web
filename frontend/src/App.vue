@@ -253,12 +253,14 @@ onMounted(() => {
           <div v-if="serverStatus" class="status-content">
             <div v-if="serverStatus.online" class="status-online">
               <div class="status-header">
+              
               <span class="online-dot"></span>
               <span class="online-text">在线</span>
               </div>
               <div class="status-info">
               <span class="version">版本: {{ serverStatus.version?.name }}</span>
               <span class="players">人数: {{ serverStatus.players?.online }}/{{ serverStatus.players?.max }}</span>
+
               </div>
             </div>
             <div v-else class="status-offline">
@@ -266,6 +268,7 @@ onMounted(() => {
             </div>
           </div>
           <div v-else class="status-loading">加载中...</div>
+          <div><span class="players">连接方式：sparkle.craftmine.fun</span></div>
         </Card>
         <Card title="地铁线路" type="metro" style="font-size: 1.5em;text-align: center">
           <MetroMap :theme="currentTheme" />
