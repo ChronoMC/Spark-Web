@@ -1,7 +1,7 @@
 <template>
   <div class="metro-map-container">
     <img
-      src="http://localhost:3000/api/metro-map/svg"
+      src="https://api.cdpyx.top/api/metro-map/svg"
       alt="Metro Map"
       class="metro-map-img"
     />
