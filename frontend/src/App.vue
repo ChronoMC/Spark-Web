@@ -72,7 +72,7 @@ function parseMarkdownWithYaml(text: string) {
 }
 
 async function openNews(filename: string) {
-  const res = await fetch(`/api/news/get/${filename}`)
+  const res = await fetch(`https://api.cdpyx.top/api/news/get/${filename}`)
   const text = await res.text()
   const parsed = parseMarkdownWithYaml(text)
   dialogTitle.value = parsed.title
@@ -107,17 +107,15 @@ function jumpTo(url: string) {
   window.open(url, '_blank')
 }
 
-// function download(url: string) { // 未使用，注释掉
-//   window.open(url, '_blank')
-// }
+
 
 async function fetchAll() {
   // 服务器状态
-  const statusRes = await fetch('/api/server-status');
+  const statusRes = await fetch('https://api.cdpyx.top/api/server-status');
   serverStatus.value = await statusRes.json();
   // 新闻列表
   newsLoading.value = true;
-  const newsRes = await fetch('/api/news');
+  const newsRes = await fetch('https://api.cdpyx.top/api/news');
   newsList.value = (await newsRes.json()).news;
   newsLoading.value = false;
 }
